@@ -1,5 +1,8 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import AuthProvider from '@/SessionProvider'
+import Navbar from '@/components/client/Navbar/Navbar'
+import Footer from '@/components/client/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,8 +16,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         
-        {children}
-        
+      <AuthProvider>
+        <Navbar />
+      <div className='min-h-screen'>
+      {children}
+      </div>
+      <Footer />
+      </AuthProvider>        
       </body>
     </html>
   )
