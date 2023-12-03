@@ -17,6 +17,11 @@ const RoomSchema = new mongoose.Schema({
           type: String,
           required: true,
         },
+        hotel: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Hotel', 
+            default: []
+          },
         roomNumbers: [{ number: Number, unavailableDates: {type: [Date]}}],
       },
 {timestamps: true})
