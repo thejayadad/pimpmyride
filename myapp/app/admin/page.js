@@ -52,7 +52,7 @@ const Admin = () => {
           <RingLoader color='#f97316' loading={loading} css={override} size={50} />
         </div>
       ) : (
-        <table className='min-w-full divide-y divide-gray-200'>
+        <table className='max-w-full divide-y divide-gray-200 mx-auto'>
           <thead className='bg-gray-50'>
             <tr>
               <th
